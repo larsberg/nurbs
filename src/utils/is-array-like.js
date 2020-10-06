@@ -1,5 +1,5 @@
 'use strict';
 
-module.exports = function isArrayLike (data) {
+export default function isArrayLike (data) {
   return Array.isArray(data) || ArrayBuffer.isView(data);
 };

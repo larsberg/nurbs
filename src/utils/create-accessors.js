@@ -1,7 +1,7 @@
 'use strict';
 
-var inferType = require('./infer-type');
-var createVariable = require('./variable');
+import inferType from './infer-type';
+import createVariable from './variable';
 
 function wrapAccessor (callback) {
   return function (i, period) {
@@ -46,7 +46,7 @@ function createAccessor (name, data) {
   }
 }
 
-module.exports = function (nurbs) {
+export default function (nurbs) {
   var accessors = {};
   var accessor;
 

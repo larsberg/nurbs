@@ -24,4 +24,4 @@ createVariable.sum = function (parts) {
   return parts.join(' + ');
 };
 
-module.exports = createVariable;
+export default createVariable;

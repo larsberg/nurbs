@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function bisect (x, t, imin, imax) {
+export default function bisect (x, t, imin, imax) {
   var lo = imin === undefined ? 0 : imin;
   var hi = imax === undefined ? x.length - 1 : imax;
   while (hi - 1 > lo) {

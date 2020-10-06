@@ -1,16 +1,15 @@
 'use strict';
 
-var inferType = require('./src/utils/infer-type');
-var computeCacheKey = require('./src/utils/cache-key');
-var isNdarray = require('./src/utils/is-ndarray');
-var isNdarrayLike = require('./src/utils/is-ndarray-like');
-var createAccessors = require('./src/utils/create-accessors');
-var numericalDerivative = require('./src/numerical-derivative');
-var isArrayLike = require('./src/utils/is-array-like');
-
-var createEvaluator = require('./src/evaluate');
-var createTransform = require('./src/transform');
-var createSupport = require('./src/support');
+import inferType from './src/utils/infer-type';
+import computeCacheKey from './src/utils/cache-key';
+import isNdarray from './src/utils/is-ndarray';
+import isNdarrayLike from './src/utils/is-ndarray-like';
+import createAccessors from './src/utils/create-accessors';
+import numericalDerivative from './src/numerical-derivative';
+import isArrayLike from './src/utils/is-array-like';
+import createEvaluator from './src/evaluate';
+import createTransform from './src/transform';
+import createSupport from './src/support';
 
 var BOUNDARY_TYPES = {
   open: 'open',
@@ -318,4 +317,4 @@ function nurbs (points, degree, knots, weights, boundary, opts) {
   return ctor;
 }
 
-module.exports = nurbs;
+export default nurbs;

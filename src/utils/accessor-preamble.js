@@ -1,6 +1,6 @@
-var inferType = require('./infer-type');
+import inferType from './infer-type';
 
-module.exports = function (nurbs, variableName, propertyName, data) {
+export default function (nurbs, variableName, propertyName, data) {
   var i;
   var code = [];
 

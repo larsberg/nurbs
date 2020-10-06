@@ -1,12 +1,12 @@
 'use strict';
 
-var isArrayLike = require('./is-array-like');
+import isArrayLike from './is-array-like';
 
 function capitalize (str) {
   return str[0].toUpperCase() + str.slice(1);
 }
 
-module.exports = function (nurbs, debug, checkBounds, pointType, weightType, knotType) {
+export default function (nurbs, debug, checkBounds, pointType, weightType, knotType) {
   var d;
   var degreeParts = [];
   var hasAnyKnots = false;

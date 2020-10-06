@@ -1,8 +1,8 @@
 'use strict';
 
-var isNdarray = require('./is-ndarray');
-var isNdarrayLike = require('./is-ndarray-like');
-var isArrayLike = require('./is-array-like');
+import isNdarray from './is-ndarray';
+import isNdarrayLike from './is-ndarray-like';
+import isArrayLike from './is-array-like';
 
 function inferType (x) {
   if (!x) {
@@ -29,4 +29,4 @@ inferType.NDARRAY = 'Nd';
 inferType.GENERIC_NDARRAY = 'GenNd';
 inferType.PACKED = 'PackArr';
 
-module.exports = inferType;
+export default inferType;

@@ -2,17 +2,17 @@
 
 'use strict';
 
-var ndloop = require('./utils/ndloop');
-var variable = require('./utils/variable');
-var accessorPreamble = require('./utils/accessor-preamble');
-var inferType = require('./utils/infer-type');
-var isArrayLike = require('./utils/is-array-like');
-var sizeGetter = require('./utils/size-getter');
+import ndloop from './utils/ndloop';
+import variable from './utils/variable';
+import accessorPreamble from './utils/accessor-preamble';
+import inferType from './utils/infer-type';
+import isArrayLike from './utils/is-array-like';
+import sizeGetter from './utils/size-getter';
 
 var evaluatorCache = {};
 var codeCache = {};
 
-module.exports = function (cacheKey, nurbs, accessors, debug, checkBounds, isBasis, derivative) {
+export default function (cacheKey, nurbs, accessors, debug, checkBounds, isBasis, derivative) {
   var splineDimension = nurbs.splineDimension;
   var i, j, n, m, d, kvar;
 

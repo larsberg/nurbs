@@ -3,11 +3,11 @@
 'use strict';
 
 var transformerCache = {};
-var accessorPreamble = require('./utils/accessor-preamble');
-var sizeGetter = require('./utils/size-getter');
-var variable = require('./utils/variable');
+import accessorPreamble from './utils/accessor-preamble';
+import sizeGetter from './utils/size-getter';
+import variable from './utils/variable';
 
-module.exports = function createTransform (cacheKey, nurbs, accessors, debug) {
+export default function createTransform (cacheKey, nurbs, accessors, debug) {
   var i, j, iterator, iterators, terms, n, rvalue, lvalue;
   var cachedTransformer = transformerCache[cacheKey];
   if (cachedTransformer) {

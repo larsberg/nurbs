@@ -1,8 +1,8 @@
 'use strict';
 
-var isNdarrayLike = require('./is-ndarray-like');
+import isNdarrayLike from './is-ndarray-like';
 
-module.exports = function (data, dataVariableName, dimension) {
+export default function (data, dataVariableName, dimension) {
   if (!data) {
     return 'this.size[' + dimension + ']';
   } else if (isNdarrayLike(data)) {

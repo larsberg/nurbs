@@ -3,7 +3,7 @@
 var args = [];
 var tmp = [];
 
-module.exports = function numericalDerivative (out, order, dimension) {
+export default function numericalDerivative (out, order, dimension) {
   if (order !== 1) {
     throw new Error('Numerical derivative not implemented for order n = ' + order + '.');
   }

@@ -1,4 +1,4 @@
-module.exports = function (arr) {
+export default function (arr) {
   if (!arr) return false;
   return (
     arr.data !== undefined &&
